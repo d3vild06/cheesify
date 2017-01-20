@@ -21,12 +21,7 @@ export const fetchCheesesError = (error) => ({
 
 export const fetchCheeses = () => dispatch => {
   dispatch(fetchCheesesRequest());
-  let URL;
-  if (process.env.NODE_ENV === 'production') {
-    URL = 'https://localhost/cheeses';
-  } else {
-    URL = 'http://localhost:8080/cheeses';
-  }
+  const URL ='/cheeses';
   return fetch(URL).then(res => {
     if (!res.ok) {
       let error = new Error(res.statusText);
