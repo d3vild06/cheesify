@@ -23,7 +23,7 @@ export const fetchCheeses = () => dispatch => {
   dispatch(fetchCheesesRequest());
   let URL;
   if (process.env.NODE_ENV === 'production') {
-    URL = 'https://localhost:8080/cheeses';
+    URL = 'https://localhost/cheeses';
   } else {
     URL = 'http://localhost:8080/cheeses';
   }
