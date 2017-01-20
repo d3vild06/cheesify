@@ -45,11 +45,14 @@ module.exports = {
     module: {
       loaders: [
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           exclude: /(node_modules)/,
           loader: 'babel',
         },
       ]
     },
-    plugins: plugins
+    plugins: plugins,
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    }
 }
